@@ -68,10 +68,10 @@ create table state (
 
 create table rate
 (
-    rate_id    SERIAL not null,
-    rate_event INT,
-    ev_rated_id INT,
-    primary key (rate_id)
+    			rate_id    SERIAL not null,
+    			rate_event INT,
+    			ev_rated_id INT,
+    			primary key (rate_id)
 );
 
 
@@ -200,6 +200,9 @@ alter table rate
     add constraint fk_ev_rated_id
         foreign key (ev_rated_id) references event(event_id)
             ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
+
 
 
 
